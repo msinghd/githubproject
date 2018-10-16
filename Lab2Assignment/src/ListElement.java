@@ -87,9 +87,9 @@ public class ListElement {
 	}
 	
 	public void printLinkedListHead () {
-		System.out.println(data);
+		System.out.print(data);
 		if(next != null) {
-			System.out.println("; ");
+			System.out.print("; ");
 			next.printLinkedListHead();
 		}
 	}
