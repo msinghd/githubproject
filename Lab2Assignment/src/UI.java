@@ -23,7 +23,8 @@ public class UI {
 		  
 		  System.out.println("Menu:\n");
 		  System.out.println("A - Add a node to the list\nR - Retrieve a node from the list");
-		  System.out.println("D - Delete a node from the list\nH - Print the linked list from head\n");
+		  System.out.println("D - Delete a node from the list\nH - Print the linked list from head");
+		  System.out.println("T - Print the linked list from tail\n");
 		  System.out.print("Q - Quit the program\n\nEnter your option: ");
 		  
 		  Scanner in = new Scanner(System.in);
@@ -55,6 +56,10 @@ public class UI {
 			  c = in.next().charAt(0);
 		  } else if (c == 'H' || c == 'h') {
 			  le.printLinkedListHead();
+			  System.out.print("\n\nEnter next option: ");
+			  c = in.next().charAt(0);
+		  } else if (c == 'T' || c == 't') {
+			  le.printLinkedListTail();
 			  System.out.print("\n\nEnter next option: ");
 			  c = in.next().charAt(0);
 		  } else if (c == 'Q' || c =='q'){
