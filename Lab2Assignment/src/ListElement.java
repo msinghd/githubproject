@@ -36,7 +36,7 @@ public class ListElement {
 	
 	public void addElement (ListElement le) {
 		ListElement temp = le;
-		ListElement current = next;
+		ListElement current = this;
 		
 		if (next == null) {
 			next = temp;
