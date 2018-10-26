@@ -58,7 +58,7 @@ public class ListElement {
 	}
 	
 	public ListElement getElement (int index) {
-		ListElement current = next;
+		ListElement current = this;
 		for (int i = 0; i < index; i++) {
 			current = current.getNext();
 		}
@@ -67,17 +67,18 @@ public class ListElement {
 	}
 	
 	public ListElement deleteElement (int index) {
-		ListElement current = next;
-		ListElement temp;
+		ListElement current = this;
+		ListElement temp = new ListElement();
 		if (index == 0) {
-			temp = next;
-			next = next.getNext();
+			temp.setData(current.data);
+			current.setData(current.getNext().getData());
+			current.setNext(current.getNext().getNext());
 		} else {
 			for (int i = 1; i < index; i++) {
 				current = current.getNext();
 			}
 			
-			temp = current;
+			temp = current.getNext();
 			
 			current.setNext(current.getNext().getNext());
 		}

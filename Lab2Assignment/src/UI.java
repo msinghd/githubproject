@@ -37,23 +37,25 @@ public class UI {
 			  ListElement temp = new ListElement();
 			  temp.setData(i);
 			  le.addElement(temp);
-			  System.out.print("Enter next option: ");
+			  System.out.print("\nEnter next option: ");
 			  c = in.next().charAt(0);	  
 		  } else if (c == 'R' || c == 'r') {
 			  System.out.print("Enter the index of the node you want to retrieve: ");
 			  int i = in.nextInt();
-			  le.getElement(i);
-			  System.out.print("\nEnter next option: ");
+			  System.out.print("Retrieved element: ");
+			  System.out.print(le.getElement(i).getData());
+			  System.out.print("\n\nEnter next option: ");
 			  c = in.next().charAt(0);
 		  } else if (c == 'D' || c == 'd') {
 			  System.out.print("Enter the index of the node you want to delete: ");
 			  int i = in.nextInt();
-			  le.deleteElement(i);
-			  System.out.print("\nEnter next option: ");
+			  System.out.print("Deleted element ");
+			  System.out.print(le.deleteElement(i).getData());
+			  System.out.print("\n\nEnter next option: ");
 			  c = in.next().charAt(0);
 		  } else if (c == 'H' || c == 'h') {
 			  le.printLinkedListHead();
-			  System.out.print("\nEnter next option: ");
+			  System.out.print("\n\nEnter next option: ");
 			  c = in.next().charAt(0);
 		  } else if (c == 'Q' || c =='q'){
 			  System.out.println("Quitting...");
